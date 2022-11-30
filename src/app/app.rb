@@ -1,13 +1,19 @@
 require_relative 'book'
 require_relative 'label'
 require_relative './presrve_data/preserve_data'
-
+require_relative '../'
+require_relative ''
+require_relative ''
+require_relative ''
+require_relative ''
 class App
   def initialize
     @preserved_books = PreserveData.new('./src/store/books.json')
     @preserved_labels = PreserveData.new('./src/store/labels.json')
     @books = []
     @labels = []
+    @generes = []
+    @music_albums = []
   end
 
   def list_all_books

@@ -23,3 +23,15 @@ CREATE TABLE books (
     cover_state VARCHAR(255),
     FOREIGN KEY (id) REFERENCES item(id),
 );
+
+CREATE TABLE music_album(
+    id INT Generated always AS identity Not null,
+title VARCHAR(100),
+color VARCHAR(60),
+PRIMARY KEY(id)
+);
+CREATE TABLE genre(
+    id INT Generated always AS identity Not null,
+    name VARCHAR(100) Not null
+);
+CREATE TABLE games ()

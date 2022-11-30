@@ -1,6 +1,6 @@
-require_relative '../music_class/genre'
-require_relative '../music_class/music_album'
-require_relative '../music_store/music_store'
+require_relative './genre'
+require_relative './music_album'
+require_relative './music_store'
 
 module MusicArchived
     def add_music
@@ -36,18 +36,18 @@ module MusicArchived
     end
 def select_genre
     if @genres.any?
-        print "Enter 'S' to Select if existed or 'N' to Creat a New Genre: "
+        print "Enter 'Y' to Select if existed or 'N' to Creat a New Genre: "
         genre_option = gets.chomp.upcase
         case genre_option
         when 'N'
             add_genre
-            when  'S'
+            when  'Y'
                 puts 'Select a Music list'
                 list_of_albums
                 selected = gets.chomp.to_i
                 @genres[select]
             else
-                puts "ERROR ,Please select 'N' or 'S' "
+                puts "ERROR ,Please select 'N' or 'Y' "
         end
     else
         add_genre

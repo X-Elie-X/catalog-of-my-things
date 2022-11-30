@@ -1,10 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'book'
 require_relative 'label'
 require_relative './presrve_data/preserve_data'
 require_relative '../'
-require_relative ''
-require_relative ''
-require_relative ''
 require_relative ''
 class App
   def initialize

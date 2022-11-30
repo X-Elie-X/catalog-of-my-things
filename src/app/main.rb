@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require_relative './app'
-require_relative './music_module.rb'
+require_relative './music_module'
 require 'json'
 
 def display

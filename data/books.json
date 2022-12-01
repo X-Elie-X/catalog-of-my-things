@@ -1,21 +1,21 @@
 [
-    {
-        "name": "Programming with Python",
-        "publisher": "Packt Publishing",
-        "publish_date": "2018-01-01",
-        "cover_state": "best"
-    },
-    {
-      "name": "Data Structure and Algorithm",
-      "publisher": "the anonymous",
-      "publish_date": "2018-01-01",
-      "cover_state": "best"
-    },
-    {
-      "name": "The C Programming Language",
-      "publisher": "the anonymous",
-      "publish_date": "2018-01-01",
-      "cover_state": "best"
-    }
-  ]
+  {
+    "name": "Programming with Python",
+    "publisher": "Packt Publishing",
+    "publish_date": "2018-01-01",
+    "cover_state": "best"
+  },
+  {
+    "name": "Data Structure and Algorithm",
+    "publisher": "the anonymous",
+    "publish_date": "2018-01-01",
+    "cover_state": "best"
+  },
+  {
+    "name": "The C Programming Language",
+    "publisher": "the anonymous",
+    "publish_date": "2018-01-01",
+    "cover_state": "best"
+  }
+]
   

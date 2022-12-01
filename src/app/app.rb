@@ -11,7 +11,6 @@ class App
   include MusicModule
   include BookMethods
 
-
   def initialize
     @books = []
     @labels = []

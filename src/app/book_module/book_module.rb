@@ -5,13 +5,12 @@ require_relative '../books_data_store/books_data'
 module BookMethods
   def list_all_books
     if @books.empty?
-      puts 'There are no books found in the list!!'
-      puts 'Kindly Add Atleast One Book To have a list of books'
+      puts 'no book found in the list!!'
     else
       @books.each_with_index do |book, index|
         puts "S.NO: #{index + 1}. Published By : #{book.publisher},
                 Published On : #{book.publish_date}
-                Book Cover State is: #{book.cover_state}"
+                Book Cover State : #{book.cover_state}"
       end
     end
   end
@@ -74,8 +73,7 @@ module BookMethods
 
   def list_all_labels
     if @labels.empty?
-      puts 'There are no Labels found in the list!!'
-      puts 'Kindly Add Atleast One Label To have a list of books'
+      puts 'no Labels found in the list!!'
     else
       @labels.each_with_index do |label, index|
         puts "S.No: #{index + 1}

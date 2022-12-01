@@ -1,8 +1,6 @@
 require_relative './option'
 module MainMenu
-
-  # rubocop:disable Metrics/CyclomaticComplexity
-  def main_menu
+  def main_menu # rubocop:disable Metrics/ClassLength
     Options.display
     option = gets.chomp.to_i
     case option
@@ -29,5 +27,4 @@ module MainMenu
     end
     main_menu
   end
-  # rubocop:enable Metrics/CyclomaticComplexity
 end

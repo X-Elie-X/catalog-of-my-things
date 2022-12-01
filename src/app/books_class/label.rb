@@ -14,3 +14,4 @@ class Label
       item.add_label = self
     end
   end
+  

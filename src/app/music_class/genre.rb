@@ -1,16 +1,14 @@
-# frozen_string_literal: true
-
 class Genre
   attr_accessor :id, :name, :items
 
-  def initialize(_id, name)
-    @id = Random.rand(1..999)
+  def initialize(name, id = Random.rand(1..1000))
+    @id = id
     @name = name
     @items = []
   end
 
-  def item(item)
+  def add_item(item)
     @items << item unless @items.include?(item)
-    items.item(self)
+    items.add_genre(self)
   end
 end

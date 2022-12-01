@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 require 'json'
 
 def get_data(file)
   files = "./data/#{file}.json"
   File.new(files, 'w+') unless File.exist?(files)
-  File.write(file, '[]') if file.empty?(files)
-  contents = File.read(file)
+  File.write(files, '[]') if File.empty?(files)
+  contents = File.read(files)
   JSON.parse(contents)
 end
 
@@ -15,13 +13,13 @@ def update_data(file, data)
   File.write("./data/#{file}.json", json_data)
 end
 
-def music_list
+def populate_music_list
   get_data('music_album').map do |music|
-    MusicAlbum.new(music['archived'], music['name'], music['date'])
+    MusicAlbum.new(music['archived'], music['name'], music['publish_date'])
   end
 end
 
-def genre_list
+def populate_genre_list
   get_data('genre').map do |genre|
     Genre.new(genre['name'])
   end

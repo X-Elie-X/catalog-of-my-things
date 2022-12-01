@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative '../src/app/item'
 
 today = Time.now.strftime('%Y/%M%D')

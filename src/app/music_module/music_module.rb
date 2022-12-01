@@ -1,39 +1,41 @@
-# frozen_string_literal: true
+require_relative '../music_class/genre'
+require_relative '../music_class/music_album'
+require_relative '../music_data/music_store'
 
-require_relative './genre'
-require_relative './music_album'
-require_relative './music_store'
-
-module MusicArchived
+module MusicModule
   def add_music
     puts 'enter [y/n] for archived: '
     archived = gets.chomp
-    archived == 'y'
+    case archived
+    when 'y'
+      archived = true
+    when 'n'
+      archived = false
+    end
     puts 'enter name: '
     name = gets.chomp
     puts 'date in this format (yyy-mm-dd): '
-    add_date = gets.chomp
-    store_music = get_data('album')
-
+    publish_date = gets.chomp
+    store_music = get_data('music_album')
     select_genre
-    add = MusicAlbum.new(archived, name, publish)
-    @music_album << add
-    music_datas = { archived: archived, name: name, publish: publish }
+    add = MusicAlbum.new(archived, name, publish_date)
+    @music_albums << add
+    music_datas = { archived: archived, name: name, publish_date: publish_date }
     store_music.push(music_datas)
-    update_data('music_list', store_music)
+    update_data('music_album', store_music)
     puts 'Music ADDED'
   end
 
   def list_of_albums
-    if @music_album.empty?
+    if @music_albums.empty?
       puts 'No Music Rejester , Kindly Add Sum'
     else
-      @music_album.each_with_index do |music_album, index|
+      @music_albums.each_with_index do |music_album, index|
         puts "S.NO: #{index + 1}
                     name:#{music_album.name}
-                    date: #{music_album.date}
-                    itunes: #{music_album.itunes}
-                    archived: #{music_album.archived}"
+                    publish_date: #{music_album.publish_date}
+                    on_spotify: #{music_album.on_spotify}
+                    is_archived: #{music_album.archived}"
       end
     end
   end
@@ -48,8 +50,8 @@ module MusicArchived
       when 'Y'
         puts 'Select a Music list'
         list_of_albums
-        selected. = gets.chomp.to_i
-        @genres[select]
+        selected = gets.chomp.to_i
+        @genres[selected]
       else
         puts "ERROR ,Please select 'N' or 'Y' "
       end
@@ -60,11 +62,10 @@ module MusicArchived
 
   def add_genre
     puts 'Add Genre: '
-    puts 'Add Name: '
     name = gets.chomp
     store_genre = get_data('genre')
     new_genre = Genre.new(name)
-    @genre << new_genre unless @genres.include?(new_genre)
+    @genres << new_genre unless @genres.include?(new_genre)
     genre_list = { name: name }
     store_genre.push(genre_list)
     update_data('genre', store_genre)
@@ -75,7 +76,7 @@ module MusicArchived
     if @genres.empty?
       puts 'No Genres Yet, Add now'
     else
-      @genre.each_with_index do |genres, index|
+      @genres.each_with_index do |genres, index|
         puts "S.No: #{index + 1}
                 Genre: #{genres.name}"
       end

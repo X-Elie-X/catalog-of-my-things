@@ -8,11 +8,11 @@ module MainMenu
     option = gets.chomp.to_i
     case option
     when 1
-      list_books
+      list_all_books
     when 2
-      list_labels
+      list_all_labels
     when 3
-      add_book
+      add_a_book
     when 4
       add_music
     when 5

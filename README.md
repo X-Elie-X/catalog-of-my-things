@@ -53,7 +53,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Simple app] <a name="about-project"></a>
+# 📖 [Catalog of my things] <a name="about-project"></a>
 
 > Catalog of my things is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON
 
@@ -81,7 +81,7 @@ After you're finished please remove all the comments and instructions!
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="#">None</a></li>
+    <li><a href="#">SQL</a></li>
   </ul>
 </details>
 
@@ -160,7 +160,8 @@ Example command:
 
 ### Run tests
 
-run `spec spec/solver_spec.rb
+- To install the test: ` gem install --no-document rspec -v '>=3.0, < 4.0' `
+- to run: ` rspec --force-color --format documentation `
 
 <!--
 Example command:
@@ -187,7 +188,7 @@ Example:
 👤**Elie Harfouche**
 
 - GitHub: [@X-Elie-X](https://github.com/X-Elie-X)
-- LinkedIn: [Elie Harfouche](https://www.linkedin.com/in/elie-m-harfouche/
+- LinkedIn: [Elie Harfouche](https://www.linkedin.com/in/elie-m-harfouche/)
 
 
 👤 **Baraka Danny (Me)**

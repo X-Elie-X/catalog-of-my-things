@@ -1,4 +1,4 @@
-require_relative '../src/app/game_author_class/game'
+require_relative '../src/app/game_class/game'
 require 'date'
 
 describe Game do

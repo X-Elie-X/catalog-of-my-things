@@ -126,7 +126,9 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder:
+- Clone this repository `https://github.com/X-Elie-X/catalog-of-my-things.git`
+- Navigate to the project
+- to run the code use `ruby src/app/main.rb`
 
 <!--
 Example commands:
@@ -160,8 +162,8 @@ Example command:
 
 ### Run tests
 
-- To install the test: ` gem install --no-document rspec -v '>=3.0, < 4.0' `
-- to run: ` rspec --force-color --format documentation `
+- To install the test nuse: ` gem install --no-document rspec -v '>=3.0, < 4.0' `
+- to run the test use: ` rspec --force-color --format documentation `
 
 <!--
 Example command:

@@ -18,10 +18,10 @@ module MainMenu
       list_authors
     when 6
       genre_list
-      
+
     when 7
       add_music
-      
+
     when 8
       add_a_book
     when 9
@@ -30,8 +30,8 @@ module MainMenu
       add_genre
     when 11
       add_a_game
-      when 12
-        add_author
+    when 12
+      add_author
     when 0
       exit
     else

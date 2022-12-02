@@ -15,12 +15,12 @@ end
 
 def populate_games_list
   get_data('games').map do |game|
-    Game.new(game['name'], game['multiplayer'], game['last_publish_date'],game['publish_date'])
+    Game.new(game['name'], game['multiplayer'], game['last_publish_date'], game['publish_date'])
   end
 end
 
 def populate_authors_list
   get_data('authors').map do |author|
-    Author.new(author['first_name'],author['last_name'])
+    Author.new(author['first_name'], author['last_name'])
   end
 end

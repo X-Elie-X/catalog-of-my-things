@@ -2,7 +2,7 @@ require 'json'
 require 'date'
 require_relative '../game_class/game'
 require_relative '../game_class/author'
-require_relative '../games_store/game_store'
+require_relative '../game_store/game_store'
 
 module HandleGame
   def add_a_game

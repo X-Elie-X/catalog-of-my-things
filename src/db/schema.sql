@@ -34,4 +34,16 @@ CREATE TABLE genre(
     id INT Generated always AS identity Not null,
     name VARCHAR(100) Not null
 );
-CREATE TABLE games ()
+
+CREATE TABLE author(
+id INT  generate always as identity,
+full_name VARCHAR(60),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE games(
+id INT,
+player  BOOLEAN,
+last_palayed_at DATE,
+FOREIGN KEY (id) REFERENCES item(id)
+);

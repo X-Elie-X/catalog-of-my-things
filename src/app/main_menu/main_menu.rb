@@ -11,17 +11,27 @@ module MainMenu
     when 2
       list_all_labels
     when 3
-      add_a_book
-    when 4
-      add_music
-    when 5
       list_of_albums
+    when 4
+      list_games
+    when 5
+      list_authors
     when 6
-      select_genre
-    when 7
-      add_genre
-    when 8
       genre_list
+      
+    when 7
+      add_music
+      
+    when 8
+      add_a_book
+    when 9
+      select_genre
+    when 10
+      add_genre
+    when 11
+      add_a_game
+      when 12
+        add_author
     when 0
       exit
     else

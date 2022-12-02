@@ -1,10 +1,10 @@
 require 'json'
 
 def get_data(file)
-  files = "./data/#{file}.json"
-  File.new(files, 'w+') unless File.exist?(files)
-  File.write(files, '[]') if File.empty?(files)
-  contents = File.read(files)
+  file_path = "./data/#{file}.json"
+  File.new(file_path, 'w+') unless File.exist?(file_path)
+  File.write(file_path, '[]') if File.empty?(file_path)
+  contents = File.read(file_path)
   JSON.parse(contents)
 end
 
@@ -15,12 +15,12 @@ end
 
 def populate_games_list
   get_data('games').map do |game|
-    Game.new(game['name'], game['player'], game['publish_date'],game['publish_date'])
+    Game.new(game['name'], game['multiplayer'], game['last_publish_date'],game['publish_date'])
   end
 end
 
 def populate_authors_list
   get_data('authors').map do |author|
-    Authors.new(author['Full_name'])
+    Author.new(author['first_name'],author['last_name'])
   end
 end

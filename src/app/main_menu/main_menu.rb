@@ -21,7 +21,6 @@ module MainMenu
 
     when 7
       add_a_book
-      
 
     when 8
       add_music

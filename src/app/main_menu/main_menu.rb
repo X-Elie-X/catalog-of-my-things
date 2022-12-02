@@ -20,10 +20,11 @@ module MainMenu
       genre_list
 
     when 7
-      add_music
+      add_a_book
+      
 
     when 8
-      add_a_book
+      add_music
     when 9
       select_genre
     when 10
